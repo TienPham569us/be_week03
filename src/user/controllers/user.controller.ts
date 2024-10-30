@@ -11,8 +11,6 @@ import { UserService } from '../services/user.service';
 import { CreateUserDto } from '../dtos/create-user.dto';
 import { plainToInstance } from 'class-transformer';
 import { validate, ValidationError } from 'class-validator';
-import { User } from '../models/user.model';
-import { DoesUserExist } from 'src/guards/doesUserExist.guard';
 
 const transformError = (error: ValidationError) => {
   const { property, constraints } = error;
